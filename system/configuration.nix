@@ -14,6 +14,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot = {
+    # https://github.com/NixOS/nixpkgs/issues/103161#issuecomment-737189895
+    kernelModules = ["uhid"];
+  };
+
   networking.hostName = "bun"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
