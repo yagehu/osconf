@@ -7,10 +7,12 @@
   home.homeDirectory = "/home/huyage";
 
   home.packages = with pkgs; [
+    cargo
     cmake
     gcc
     gnumake
     libtool
+    rustc
   ];
 
   # This value determines the Home Manager release that your
