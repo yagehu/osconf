@@ -7,6 +7,10 @@
   home.homeDirectory = "/home/huyage";
 
   home.packages = with pkgs; [
+    cmake
+    gcc
+    gnumake
+    libtool
   ];
 
   # This value determines the Home Manager release that your
@@ -23,6 +27,10 @@
     enable = true;
     font.name = "Cantarell";
     theme.name = "Adwaita-dark";
+  };
+
+  programs.emacs = {
+    enable = true;
   };
 
   programs.git = {
