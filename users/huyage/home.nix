@@ -13,6 +13,7 @@
     gnumake
     libtool
     rustc
+    rust-analyzer
   ];
 
   # This value determines the Home Manager release that your
