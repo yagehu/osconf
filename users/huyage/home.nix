@@ -66,12 +66,13 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.zsh = {
-    enable = true;
-    oh-my-zsh = {
-      enable = true;
-      plugins = ["git"];
-      theme = "agnoster";
-    };
-  };
+  programs.zsh =
+    { enable = true
+    ; enableAutosuggestions = true
+    ; oh-my-zsh =
+        { enable = true
+        ; plugins = [ "git" ]
+        ; theme = "agnoster"
+	; }
+    ; };
 }
