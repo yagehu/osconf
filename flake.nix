@@ -22,7 +22,13 @@
       bun = lib.nixosSystem {
         inherit system;
 
-	modules = [ system/configuration.nix ];
+	modules = [ system/configuration.nix system/bun.hardware-configuration.nix ];
+      };
+
+      roaming-bunny = lib.nixosSystem {
+        inherit system;
+
+	modules = [ system/configuration.nix system/roaming-bunny.hardware-configuration.nix ];
       };
     };
 

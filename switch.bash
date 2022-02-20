@@ -3,4 +3,4 @@
 set -euxo pipefail
 
 home-manager switch --flake .#huyage
-sudo nixos-rebuild switch --flake .#
+sudo nixos-rebuild switch --flake .#$1
