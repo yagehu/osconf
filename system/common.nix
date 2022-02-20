@@ -24,7 +24,7 @@
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
-  networking.useDHCP = false;
+  networking.useDHCP = false
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -38,12 +38,12 @@
   # };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  ; services.xserver =
+    { enable = true
+    ; displayManager.gdm.enable = true
+    ; desktopManager.gnome.enable = true
+    ; xkbOptions = "ctrl:swapcaps"
+    ; }
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
@@ -60,7 +60,7 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.huyage = {
+  ; users.users.huyage = {
     isNormalUser = true;
     home = "/home/huyage";
     extraGroups = ["wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
