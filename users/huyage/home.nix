@@ -11,6 +11,7 @@
     cmake
     gcc
     gnumake
+    gnupg
     libtool
     rustc
     rustfmt
