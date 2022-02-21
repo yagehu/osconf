@@ -13,7 +13,9 @@
     gnumake
     libtool
     rustc
+    rustfmt
     rust-analyzer
+    slack
   ];
 
   # This value determines the Home Manager release that your
