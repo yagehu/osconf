@@ -65,20 +65,20 @@
     home = "/home/huyage";
     extraGroups = ["wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
-  };
+  }
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    _1password-gui
-    emacs
-    firefox
-    git
-    gnome.gnome-tweaks
-    neovim
-    ripgrep
-    wget
-  ];
+  ; environment.systemPackages = with pkgs;
+    [ _1password-gui
+      emacs
+      firefox
+      git
+      gnome.gnome-tweaks
+      neovim
+      ripgrep
+      wget
+    ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -121,6 +121,13 @@
   fonts.fonts = with pkgs; [
     noto-fonts-cjk
     jetbrains-mono
-  ];
-}
+  ]
+
+; virtualisation =
+    { podman =
+        { enable = true
+        ; dockerCompat = true
+        ; }
+    ; }
+; }
 
