@@ -42,7 +42,6 @@
     { enable = true
     ; displayManager.gdm.enable = true
     ; desktopManager.gnome.enable = true
-    ; xkbOptions = "ctrl:swapcaps"
     ; }
 
   # Configure keymap in X11

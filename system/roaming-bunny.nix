@@ -6,4 +6,5 @@
     ; interfaces.enp38s0f1.useDHCP = true
     ; interfaces.wlp0s20f3.useDHCP = true
     ; }
+; services.xserver.xkbOptions = "ctrl:swapcaps"
 ; }
