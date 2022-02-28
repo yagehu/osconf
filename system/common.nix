@@ -9,12 +9,12 @@
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.canTouchEfiVariables = true
 
-  boot = {
-    # https://github.com/NixOS/nixpkgs/issues/103161#issuecomment-737189895
-    kernelModules = ["uhid"];
-  };
+; boot =
+  { # https://github.com/NixOS/nixpkgs/issues/103161#issuecomment-737189895
+    kernelModules = [ "uhid" ]
+  ; }
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -24,7 +24,7 @@
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
-  networking.useDHCP = false
+; networking.useDHCP = false
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";

@@ -12,6 +12,7 @@
     gcc
     gnumake
     gnupg
+    jetbrains.datagrip
     libtool
     rustc
     rustfmt
