@@ -38,9 +38,13 @@
 
   programs.emacs = {
     enable = true;
-  };
+  }
 
-  programs.git = {
+; programs.fzf =
+  { enable = true
+  ; }
+
+; programs.git = {
     enable = true;
     userName = "Yage Hu";
     userEmail = "huyage@fastmail.com";
