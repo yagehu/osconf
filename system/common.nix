@@ -75,6 +75,7 @@
       git
       gnome.gnome-tweaks
       neovim
+      openssl
       ripgrep
       wget
     ];
