@@ -18,6 +18,7 @@
     rustfmt
     rust-analyzer
     slack
+    yaml-language-server
   ];
 
   # This value determines the Home Manager release that your
