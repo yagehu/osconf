@@ -14,6 +14,7 @@
     gnupg
     jetbrains.datagrip
     libtool
+    postman
     rustc
     rustfmt
     rust-analyzer

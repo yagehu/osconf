@@ -74,6 +74,7 @@
       firefox
       git
       gnome.gnome-tweaks
+      jq
       neovim
       openssl
       ripgrep
