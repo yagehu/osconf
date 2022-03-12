@@ -70,6 +70,7 @@
   # $ nix search wget
   ; environment.systemPackages = with pkgs;
     [ _1password-gui
+      bind
       emacs
       firefox
       git
@@ -79,7 +80,7 @@
       openssl
       ripgrep
       wget
-    ];
+    ]
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -89,7 +90,7 @@
   #   enableSSHSupport = true;
   # };
 
-  programs.zsh.enable = true;
+; programs.zsh.enable = true;
 
   # List services that you want to enable:
 
