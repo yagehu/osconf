@@ -4,13 +4,10 @@
 
 { config, pkgs, ... }:
 
-{
-  imports = [ ];
-
+{ imports = [ ]
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true
-
+; boot.loader.systemd-boot.enable = true
+; boot.loader.efi.canTouchEfiVariables = true
 ; boot =
   { # https://github.com/NixOS/nixpkgs/issues/103161#issuecomment-737189895
     kernelModules = [ "uhid" ]
