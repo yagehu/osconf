@@ -12,6 +12,7 @@
   ; loader.efi.canTouchEfiVariables = true
     # https://github.com/NixOS/nixpkgs/issues/103161#issuecomment-737189895
   ; kernelModules = [ "uhid" ]
+  ; kernelPackages = pkgs.linuxPackages_latest
   ; }
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -60,7 +61,11 @@
   ; users.users.huyage = {
     isNormalUser = true;
     home = "/home/huyage";
-    extraGroups = ["wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
+    extraGroups =
+      [ "libvirtd"
+        "wheel"
+        "networkmanager"
+      ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
   }
 
@@ -77,6 +82,7 @@
       neovim
       openssl
       ripgrep
+      virt-manager
       wget
     ]
 
@@ -88,6 +94,7 @@
   #   enableSSHSupport = true;
   # };
 
+; programs.dconf.enable = true
 ; programs.zsh.enable = true;
 
   # List services that you want to enable:
@@ -111,9 +118,9 @@
 ; security.pam.loginLimits =
   [
     { domain = "*"
-    ; type = "soft"
+    ; type = "-"
     ; item = "nofile"
-    ; value = "4096"
+    ; value = "9192"
     ; }
   ]
 ; nix = {
@@ -131,7 +138,10 @@
   ]
 
 ; virtualisation =
-    { podman =
+    { libvirtd =
+      { enable = true
+      ; }
+    ; podman =
         { enable = true
         ; dockerCompat = true
         ; }
